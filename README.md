@@ -1,10 +1,9 @@
 # React App with Appwrite Backend
 
 This is a web application built using React for the frontend and Appwrite as the backend service. The application allows users to log in with their credentials and access their personalized notes.
+<img width="1470" alt="Screenshot 2024-12-07 at 4 20 01 PM" src="https://github.com/user-attachments/assets/352b6f58-3c79-449e-89b4-b47c6ee38f77">
 
-
-
-#### You can access the  website here : [NotesCraft](#)
+#### You can access the  website here : [NotesCraft](https://notescraft.netlify.app)
 
 ### Login with:
 
