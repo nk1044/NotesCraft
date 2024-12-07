@@ -31,8 +31,6 @@ function Home() {
         }
       );
       // console.log(result);
-  
-
       AddNote({
         ...result
       });

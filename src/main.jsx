@@ -10,6 +10,7 @@ import NotesPreview from './Pages/NotesPreview.jsx';
 import AllNotes from './Pages/AllNotes.jsx';
 import Pinned from './Pages/Pinned.jsx';
 import Archived from './Pages/Archived.jsx';
+import Protected from './Components/Authenticate.jsx';
 
 const router = createBrowserRouter([
   {
@@ -18,12 +19,12 @@ const router = createBrowserRouter([
     children: [
       {
         path: '',
-        element: <Home />,
+        element: (<Protected><Home /></Protected>),
         children: [
-          { path: '', element: <AllNotes /> },
-          { path: 'notes/:id', element: <NotesPreview /> },
-          { path: 'pinned', element: <Pinned /> },
-          { path: 'archived', element: <Archived /> },
+          { path: '', element: (<Protected> <AllNotes /> </Protected>) },
+          { path: 'notes/:id', element: (<Protected> <NotesPreview /> </Protected>) },
+          { path: 'pinned', element: (<Protected> <Pinned /> </Protected>) },
+          { path: 'archived', element: (<Protected> <Archived /> </Protected>) },
         ],
       },
       { path: 'login', element: <Login /> },
