@@ -9,6 +9,7 @@ function Home() {
   const [user, setuser] = useState({});
   const navigate = useNavigate();
   const {User} = useUser();
+  console.log(User);
   const SetUser = useUser((state) => state.SetUser);
   const AddNote = UseNotes((state) => state.AddNote);
   const SetNote = UseNotes((state) => state.SetNote);
@@ -30,7 +31,7 @@ function Home() {
           Archived: false,
         }
       );
-      // console.log(result);
+      console.log(result);
       AddNote({
         ...result
       });
@@ -42,12 +43,12 @@ function Home() {
 
   
   useEffect(()=>{
-    if (!User || User.name === undefined || Object.keys(User).length === 0) {
+    if (!User || User.name === '' || User.name===undefined || Object.keys(User).length === 0) {
       SetNote([]);
       navigate('/login');
     }    
     else setuser(User);
-  }, [user]);
+  }, []);
 
 
   const handleLogout = async () => {
@@ -56,7 +57,7 @@ function Home() {
       SetUser({});
       setuser({});
       SetNote([]);
-      // console.log('User logged out successfully');
+      console.log('User logged out successfully');
       navigate('/login');
     } catch (error) {
       console.error('Failed to log out:', error);
@@ -77,7 +78,7 @@ function Home() {
         </div>
 
         <div className="flex items-center space-x-2 cursor-pointer text-white font-jaro font-normal text-base">
-          <h2 className='text-4xl'>NoteCraft</h2>
+          <h2 className='text-4xl'>NotesCraft</h2>
         </div>
 
         <div className="flex items-center gap-3">

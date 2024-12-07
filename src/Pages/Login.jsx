@@ -22,6 +22,7 @@ const Login = () => {
     email: '',
     password: '',
   });
+  const [LoginError, setLoginError] = useState(false);
 
   const SetUser = useUser((state) => state.SetUser);
   const ZustandUser = useUser((state) => state.User);
@@ -47,6 +48,7 @@ const Login = () => {
       navigate('/');
     } catch (error) {
       console.error('Failed to log in:', error);
+      setLoginError(true);
     }
   };
 
@@ -89,7 +91,10 @@ const Login = () => {
       ) : (
         <div className="h-screen flex justify-center items-center">
           <div className="border border-black/10 bg-gray-100 rounded-2xl p-8">
-            <h2 className="font-bold text-2xl text-center mb-4">Login</h2>
+            {LoginError?(
+              <h2 className="font-bold text-2xl text-center mb-4">Invalid Credentials</h2>):(
+              <h2 className="font-bold text-2xl text-center mb-4">Login</h2>)}
+            
             <form
               action="#"
               method="post"
