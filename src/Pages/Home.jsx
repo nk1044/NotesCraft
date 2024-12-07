@@ -9,7 +9,7 @@ function Home() {
   const [user, setuser] = useState({});
   const navigate = useNavigate();
   const {User} = useUser();
-  console.log(User);
+  // console.log(User);
   const SetUser = useUser((state) => state.SetUser);
   const AddNote = UseNotes((state) => state.AddNote);
   const SetNote = UseNotes((state) => state.SetNote);
@@ -57,7 +57,7 @@ function Home() {
       SetUser({});
       setuser({});
       SetNote([]);
-      console.log('User logged out successfully');
+      // console.log('User logged out successfully');
       navigate('/login');
     } catch (error) {
       console.error('Failed to log out:', error);
