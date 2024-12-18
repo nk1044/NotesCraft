@@ -8,14 +8,14 @@ function NotesCard({id, text = "text", title = "Title", details = { encrypt: fal
       const navigate = useNavigate();
   
     return (
-      <div className="bg-[#272013] border border-[#272013] hover:bg-[#3a301d] rounded-2xl w-[210px] sm:w-[250px] h-[180px] p-4 text-gray-200 shadow-md hover:shadow-lg 
-      transition-all duration-300 cursor-pointer inline-block ml-5 mt-5"
+      <div className="bg-[#272013] border border-[#272013] hover:bg-[#3a301d] rounded-2xl md:w-[210px] w-full md:h-[180px] sm:h-[100px] h-[70px] p-4 text-gray-200 shadow-md hover:shadow-lg 
+      transition-all duration-300 cursor-pointer inline-block mt-5 "
       onClick={()=>(navigate(`/notes/${id}`))}>
 
-        <div className="text-center text-xl font-semibold truncate">{title}</div>
+        <div className="text-center text-xl font-semibold truncate w-[100%] overflow-hidden">{title}</div>
   
         <div
-          className={`mt-3 text-gray-300 text-sm h-[53px] overflow-hidden px-2 text-center ${
+          className={`mt-3 text-gray-300 text-sm h-[53px] overflow-hidden px-2 text-center md:block hidden ${
             details.encrypt && "blur-sm"
           }`}
         >

@@ -37,9 +37,9 @@ function AllNotes() {
     }, []);
 
     return (
-        <div className="w-full rounded-2xl p-5">
+        <div className="w-full ">
             {Notes.length > 0 ? (
-                <ul className="flex flex-wrap gap-x-4 gap-y-0">
+                <ul className="md:flex md:flex-wrap md:justify-around md:gap-y-0 w-full  grid grid-cols-1 px-3 sm:gap-1 ">
                     {Notes.map((note, index) => (
                         !note.Archived && (
                         <li key={index}>

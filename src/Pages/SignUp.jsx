@@ -79,21 +79,18 @@ function SignUp() {
       </div>
       ) : (
         <div className="h-screen flex justify-center items-center">
-          <div className="border-2 border-black/10 max-w-lg mx-auto bg-gray-100 p-10 rounded-2xl">
+          <div className="border-2 border-black/10 mx-auto bg-gray-100 p-10 rounded-2xl w-[90%] max-w-md ">
             <h2 className="text-2xl font-bold text-center mb-6">Sign Up</h2>
             <form
               className="grid grid-cols-1 gap-4"
               onSubmit={handleSubmit}
             >
               <div className="flex justify-between mb-2">
-                <label htmlFor="Name" className=" mb-1 pl-1">
-                  Enter Name
-                </label>
                 <input
                   type="text"
                   id="Name"
                   placeholder="Enter name"
-                  className="ml-4 px-2 rounded-lg bg-gray-100 border border-black/10"
+                  className="ml-4 px-2 rounded-lg bg-gray-100 border border-black/10 py-2 sm:py-1 w-[90%] sm:w-[100%]"
                   value={User.name}
                   onChange={(e) =>
                     setUser({ ...User, name: e.target.value })
@@ -101,14 +98,11 @@ function SignUp() {
                 />
               </div>
               <div className="flex justify-between mb-2">
-                <label htmlFor="Email" className=" mb-1 pl-1">
-                  Enter Email
-                </label>
                 <input
                   type="email"
                   id="Email"
                   placeholder="Enter email"
-                  className="ml-4 px-2 rounded-lg bg-gray-100 border border-black/10"
+                  className="ml-4 px-2 rounded-lg bg-gray-100 border border-black/10 py-2 sm:py-1 w-[90%] sm:w-[100%]"
                   value={User.email}
                   onChange={(e) =>
                     setUser({ ...User, email: e.target.value })
@@ -116,14 +110,11 @@ function SignUp() {
                 />
               </div>
               <div className="flex justify-between mb-2">
-                <label htmlFor="Pass" className=" mb-1 pl-1">
-                  Enter Password
-                </label>
                 <input
                   type="password"
                   id="Pass"
                   placeholder="Enter password"
-                  className="ml-4 px-2 rounded-lg bg-gray-100 border border-black/10"
+                  className="ml-4 px-2 rounded-lg bg-gray-100 border border-black/10 py-2 sm:py-1 w-[90%] sm:w-[100%]"
                   value={User.password}
                   onChange={(e) =>
                     setUser({ ...User, password: e.target.value })

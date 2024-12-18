@@ -79,11 +79,11 @@ function Notes() {
 
   
   return (
-    <div className=" w-full flex max-w-[80%] p-4 bg-[#202123]">
-          <div className="border-2 border-gray-400 rounded-2xl flex flex-grow text-white flex-col">
+    <div className="w-full h-full p-4 bg-[#202123] ">
+          <div className="border-2 border-gray-400 rounded-2xl flex flex-grow text-white flex-col w-full h-full ">
              
               {/* Header Area */}
-                  <div className="flex justify-between items-center mb-4">
+                  <div className="flex justify-between items-center mb-4 w-full">
                       <div className="flex justify-center w-full mx-2 p-3 text-3xl">
                           <input
                               type="text"

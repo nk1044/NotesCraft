@@ -90,10 +90,10 @@ const Login = () => {
         </div>
       ) : (
         <div className="h-screen flex justify-center items-center">
-          <div className="border border-black/10 bg-gray-100 rounded-2xl p-8">
+          <div className="border border-black/10 bg-gray-100 rounded-2xl p-8 w-[90%] max-w-md">
             {LoginError?(
               <h2 className="font-bold text-2xl text-center mb-4">Invalid Credentials</h2>):(
-              <h2 className="font-bold text-2xl text-center mb-4">Login</h2>)}
+              <h2 className="font-bold text-2xl text-center mb-4">Login 1</h2>)}
             
             <form
               action="#"
@@ -101,15 +101,12 @@ const Login = () => {
               className="grid grid-cols-1 gap-4"
               onSubmit={handleSubmit}
             >
-              <div className="flex justify-between mb-2">
-                <label id="Email" className="mb-1 pl-1">
-                  Enter Email
-                </label>
+              <div className="flex justify-between mb-2 ">
                 <input
                   type="text"
                   id="Email"
                   placeholder="Enter email"
-                  className="ml-4 px-2 rounded-lg bg-gray-100 border border-black/10"
+                  className="ml-4 px-2 rounded-lg bg-gray-100 border py-2 sm:py-1 border-black/10 w-[90%] sm:w-[100%]"
                   onChange={(e) =>
                     setUser({
                       ...User,
@@ -119,14 +116,11 @@ const Login = () => {
                 />
               </div>
               <div className="flex justify-between mb-2">
-                <label id="Pass" className="mb-1 pl-1">
-                  Enter Password
-                </label>
                 <input
                   type="password"
                   id="Pass"
                   placeholder="Enter password"
-                  className="ml-4 px-2 rounded-lg bg-gray-100 border border-black/10"
+                  className="ml-4 px-2 rounded-lg bg-gray-100 border py-2 sm:py-1 border-black/10 w-[90%] sm:w-full"
                   onChange={(e) =>
                     setUser({
                       ...User,
@@ -137,7 +131,7 @@ const Login = () => {
               </div>
               <button
                 type="submit"
-                className="border border-black/10 p-2 rounded-lg w-full bg-sky-400 text-white hover:bg-sky-500"
+                className="border border-black/10 p-1 sm:p-2 rounded-lg w-full bg-sky-400 text-white hover:bg-sky-500"
               >
                 Submit
               </button>
